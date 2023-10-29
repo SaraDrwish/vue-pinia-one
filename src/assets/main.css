@@ -1,0 +1,73 @@
+/* @import './base.css'; */
+
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Caveat:wght@400;700&family=Hachi+Maru+Pop&family=Inter:wght@100;200;300;400;500;600;700&family=Merriweather+Sans:wght@300;400;500;600&family=Mukta+Mahee:wght@600;700;800&family=Open+Sans:wght@300&family=Poltawski+Nowy&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@1,100;1,300;1,700&family=Rubik:wght@300;400;500&display=swap');
+
+
+/* /////////////////////////////////// */
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+  /* font-family: 'Hachi Maru Pop'; */
+}
+a,
+.green {
+  text-decoration: none;
+  color: rgb(125, 91, 125);
+  transition: 0.4s;
+}
+
+/* /////////////////////////////////// */
+
+
+
+body{
+  background-color: rgb(206, 165, 206);
+  color: rgb(70, 94, 167);
+  font-family:'Hachi Maru Pop', cursive;
+  text-transform: capitalize;
+}
+
+header{
+  color: #FFC73D ;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  font-weight: bold;
+}
+
+header img{
+  width: 10%;
+  height: 10%;
+  margin: auto;
+}
+
+
+
+/* 
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(259, 81%, 12%, 0.555);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+} */
