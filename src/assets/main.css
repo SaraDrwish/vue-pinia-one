@@ -31,7 +31,7 @@ body{
 
 header{
   color: #FFC73D ;
-  background-color: lightblue;
+  /* background-color: lightblue; */
   display: flex;
   justify-content: center;
   align-items: center;

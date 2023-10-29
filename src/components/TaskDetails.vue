@@ -2,12 +2,8 @@
   <div class="task">
     <h2>{{ tsk.title }}</h2>
     <div class="icons">
-      <!-- <i class="material-icons">delete</i> -->
-      <!-- <span class="material-symbols-outlined"> delete </span> -->
-      <i class="material-symbols-outlined"> delete </i>
-      <i class="material-symbols-outlined"> favorite </i>
-      <!-- <i class="material-icons">favorite</i> -->
-      
+      <i class="material-icons material-symbols-outlined"> delete </i>
+      <i class="material-symbols-outlined material-icons"> favorite </i>
     </div>
   </div>
 </template>
@@ -19,28 +15,33 @@
 </script>
 
 <style>
+
+
 .task{
-  margin: auto;
-  text-align: center;
+  margin: 2% auto;
+  /* text-align: center; */
   padding: 1%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
+  background-color: whitesmoke;
+  width: 45%;
+  border-radius: 2rem;
 }
+
 .icons{
-/* text-align: right; */
-display: inline-block;
+display: flex;
+justify-content: space-evenly;
 }
 .material-icons{
   text-align: right;
-  padding: 1%;
-  display: inline-block;
+  display: flex;
+  margin-left: 1.5rem;
 }
 .task i {
-  margin: 1%;
   cursor: pointer;
   font-size: 19px;
-  color: rgb(66, 34, 66);
+  color: rgb(135, 96, 135);
 }
 
 .material-symbols-outlined {
