@@ -3,8 +3,7 @@ import { defineStore } from "pinia"
 export const useTaskStore = defineStore('TaskStore', {
 
   state: () => ({
-    tasks: 
-      [],
+     tasks:  [],
      loading : false
   }),
   getters: {
@@ -65,7 +64,7 @@ export const useTaskStore = defineStore('TaskStore', {
         const tsk = this.tasks.find(t => t.id === id)
         tsk.isFav = !tsk.isFav
 
-         const res = await fetch("http://localhost:3000/tasks", {
+          const res = await fetch("http://localhost:3000/tasks", {
           method: 'PATCH',
           body: JSON.stringify({isFav: tsk.isFav } ),
           headers: { "Content-Type": "application/json" }
