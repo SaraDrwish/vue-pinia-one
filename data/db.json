@@ -1,28 +1,24 @@
 {
-  "tasks" : [
+  "tasks": [
     {
-      "title": "sa",
-      "isFav" : false,
-      "id" : 1
-    },
-     {
-      "title": "sasa",
-      "isFav" : true,
-      "id" : 2
-    }
-    ,
-     {
       "title": "lalalala",
-      "isFav" : false,
-      "id" : 3
-    }
-    ,
-     {
+      "isFav": false,
+      "id": 3
+    },
+    {
       "title": "adel",
-      "isFav" : true,
-      "id" : 4
+      "isFav": true,
+      "id": 4
+    },
+    {
+      "title": "sdsds",
+      "isFav": false,
+      "id": 6481
+    },
+    {
+      "title": "dasdsdsdsdssssss",
+      "isFav": false,
+      "id": 4298
     }
-
   ]
-
 }
