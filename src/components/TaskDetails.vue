@@ -25,18 +25,15 @@ import { useTaskStore } from "../stors/TaskStore"
 
 .task{
   margin: 2% auto;
-  /* text-align: center; */
-  padding: 1%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: whitesmoke;
-  width: 45%;
+  width: 40%;
   border-radius: 2rem;
 }
 .icons .active{
-  /* background-color: red; */
-  color: red;
+   color: red;
 }
 .icons{
 display: flex;

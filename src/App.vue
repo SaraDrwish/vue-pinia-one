@@ -25,16 +25,14 @@
 <!-- task list  -->
 
 <div class="task-list" v-if="filter === 'all' " >
-  <!-- <h4>all tasks : </h4> -->
-  <h4> you have {{  TaskStore.totCount }} to do : </h4>
+   <h4> you have {{  TaskStore.totCount }} to do : </h4>
   <div v-for="tsk in TaskStore.tasks " :key="tsk" >
     <TaskDetails :tsk="tsk" />
   </div>
 </div>
 
   <div class="class-list"  v-if="filter === 'fav'">
-      <!-- <h4>fav tasks : </h4> -->
-      <h4> you have  {{ TaskStore.favCount }} fav tasks to do </h4>
+       <h4> you have  {{ TaskStore.favCount }} fav tasks to do </h4>
       <div v-for="tsk in TaskStore.fav" :key="tsk">
           <TaskDetails :tsk="tsk" />
       </div>
@@ -56,33 +54,11 @@
   components: {TaskDetails , TaskForm},
   setup() {
      const TaskStore = useTaskStore()
-    //  const newTask = ref('')
      const filter = ref('all')
-
-      return { TaskStore , filter  }
-        
+     
+      return { TaskStore , filter  }  
     }
 
-  
 }
 
 </script>
-
-<style>
-
-/* .task-list{
-  margin: auto;
-  text-align: center;
-  background-color: lightblue;
-  padding: 2%;
-  border-radius: 2rem;
-} */
-
-.task-list h4{
-  text-align: center;
-  margin: 2%;
-  padding: 2%;
-}
-
-
-</style>
