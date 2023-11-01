@@ -36,15 +36,13 @@ export const useTaskStore = defineStore('TaskStore', {
       async addTask(tsk) {
         this.tasks.push(tsk)
         const res = await fetch("http://localhost:3000/tasks", {
-          method: 'POST',
+          method: "POST",
           body: JSON.stringify(tsk),
           headers: { "Content-Type": "application/json" }
         })
-         
           if(res.error){
             console.log(res.error)
           }
-        
       },
       async deleteTask(id) {
         this.tasks = this.tasks.filter(t => {
@@ -52,32 +50,27 @@ export const useTaskStore = defineStore('TaskStore', {
         })
 
          const res = await fetch("http://localhost:3000/tasks/"+id, {
-          method: 'DELETE',
+          method: "DELETE"
         })
-         
           if(res.error){
             console.log(res.error)
         }
-        
       },
       async toggleFav(id) {
         const tsk = this.tasks.find(t => t.id === id)
         tsk.isFav = !tsk.isFav
 
-          const res = await fetch("http://localhost:3000/tasks", {
-          method: 'PATCH',
-          body: JSON.stringify({isFav: tsk.isFav } ),
-          headers: { "Content-Type": "application/json" }
-        })
-         
-          if(res.error){
-            console.log(res.error)
-        }
+        const res = await fetch("http://localhost:3000/tasks/"+id, {
+        method: "PATCH",
+        body: JSON.stringify({isFav: tsk.isFav}),
+        headers: { "Content-Type": "application/json" }
+         })
         
-    }
+        if(res.error){
+          console.log(res.error)
+          }
+       }
       
-      
-  
     }
 
 } )
