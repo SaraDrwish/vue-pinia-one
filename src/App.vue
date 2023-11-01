@@ -45,7 +45,7 @@
       </div>
   </div>
 
-  <button @click="$reset">reset</button>
+  <button @click="TaskStore.$reset">reset</button>
 
  </main>
  
