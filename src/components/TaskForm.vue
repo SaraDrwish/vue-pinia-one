@@ -7,7 +7,7 @@
 
 <script>
 
-import {useTskStore} from "../stors/TaskStore"
+import { useTaskStore } from "../stors/TaskStore"
 import {ref} from "vue"
  
   export default {

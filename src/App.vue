@@ -49,13 +49,13 @@
  import { ref } from 'vue';
  import TaskDetails from "./components/TaskDetails.vue";
  import TaskForm from "./components/TaskForm.vue";
- import { useTskStore } from './stors/TaskStore';
+ import { useTaskStore } from './stors/TaskStore';
 
  export default {
 
   components: {TaskDetails , TaskForm},
   setup() {
-     const TaskStore = useTskStore()
+     const TaskStore = useTaskStore()
     //  const newTask = ref('')
      const filter = ref('all')
 
