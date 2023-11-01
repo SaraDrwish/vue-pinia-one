@@ -45,29 +45,33 @@ header{
 }
 
 header img{
-  width: 10%;
-  height: 10%;
+  width: 8%;
+  height: 8%;
   margin: auto;
 }
 
-
-
-/* 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(259, 81%, 12%, 0.555);
-  }
+button {
+  border: none;
+  border-radius: 0.4rem;
+  background-color: rgb(39, 53, 77);
+  color: thistle;
+  padding: 1% 2%;
+  margin: 2%;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-size: bold;
+  font-size: 16px;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+ .task-list {
+   margin: auto;
+   text-align: center;
+   background-color: lightblue;
+   padding: 2%;
+   border-radius: 2rem;
+ }
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
-} */
+ .filter{
+  text-align: right;
+  margin-right: 8%;
+ }

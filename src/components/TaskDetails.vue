@@ -2,15 +2,21 @@
   <div class="task">
     <h2>{{ tsk.title }}</h2>
     <div class="icons">
-      <i class="material-icons material-symbols-outlined"> delete </i>
-      <i class="material-symbols-outlined material-icons"> favorite </i>
+      <i @click="TaskStore.deleteTask(tsk.id)"  class="material-icons material-symbols-outlined"> delete </i>
+      <i @click="TaskStore.toggleFav(tsk.id)" :class="{active:tsk.isFav}" class="material-symbols-outlined material-icons"> favorite </i>
     </div>
   </div>
 </template>
 
 <script>
+import { useTaskStore } from "../stors/TaskStore"
   export default {
-    props : ["tsk"]
+  props: ["tsk"],
+  setup() {
+    const TaskStore = useTaskStore()
+
+    return {TaskStore}
+    }
   }
 </script>
 
@@ -28,7 +34,9 @@
   width: 45%;
   border-radius: 2rem;
 }
-
+.active{
+  background-color: red;
+}
 .icons{
 display: flex;
 justify-content: space-evenly;
