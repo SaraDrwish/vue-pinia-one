@@ -4,10 +4,8 @@ export const useTaskStore = defineStore('TaskStore', {
 
   state: () => ({
     tasks: 
-      [
-        {title:"task one " , id : 1 , isFav:true},
-        {title:"task two " , id : 2 ,  isFav:false}
-      ]
+      [],
+     loading : false
   }),
   getters: {
     fav() {
@@ -29,10 +27,12 @@ export const useTaskStore = defineStore('TaskStore', {
   actions: {
       
     async getTaskes() {
+      this.loading = true
       const res = await fetch("http://localhost:3000/tasks")      
       const data = await res.json()
       this.tasks = data
-      } ,
+      this.loading = false
+     },
     
       addTask(tsk) {
         this.tasks.push(tsk)
