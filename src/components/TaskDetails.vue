@@ -34,8 +34,9 @@ import { useTaskStore } from "../stors/TaskStore"
   width: 45%;
   border-radius: 2rem;
 }
-.active{
-  background-color: red;
+.icons .active{
+  /* background-color: red; */
+  color: red;
 }
 .icons{
 display: flex;

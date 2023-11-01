@@ -50,6 +50,42 @@ header img{
   margin: auto;
 }
 
+form{
+  width: 55%;
+  margin: 2% auto;
+  padding: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  /* background-color: #FFC73D; */
+}
+
+form input{
+  width: 60%;
+  padding: 3%;
+  border:  none;
+  margin: 2%;
+  text-align: center;
+  border-radius: 0.8rem;
+  font-size: 20px;
+  color: #FFC73D;
+  font-weight: bold;
+}
+
+form input:focus {
+ /* border: none; */
+ outline: none;
+}
+
+form button {
+  color: #FFC73D;
+}
+
 button {
   border: none;
   border-radius: 0.4rem;

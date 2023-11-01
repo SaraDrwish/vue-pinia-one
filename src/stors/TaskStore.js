@@ -13,32 +13,35 @@ export const useTaskStore = defineStore('TaskStore', {
     fav() {
       // this refers to the state object 
       //filter return a new arr
-      return  this.tasks.filter(t => t.isFav) 
+      return this.tasks.filter(t => t.isFav)
     },
-    favCount(){
+    favCount() {
       return this.tasks.reduce((prevs, curnt) => {
         return curnt.isFav ? prevs + 1 : prevs
       }, 0)
     },
     totCount: (state) => {
       return state.tasks.length
-  },
-    actions: {
-      addTask(tsk) {
-       this.tasks.push(tsk)
-      }
-    },
-    deleteTask(id) {
-      this.tasks = this.tasks.filter(t => {
-        return t.id !== id 
-      })
-    },
-    toggleFav(id) {
-      const tsk = this.tasks.find(t => t.id ===  id )
-        tsk.isFav = !tsk.isFav
     }
+    
+   },
+    
+    actions: {
+    
+      addTask(tsk) {
+        this.tasks.push(tsk)
+      },
+      deleteTask(id) {
+        this.tasks = this.tasks.filter(t => {
+          return t.id !== id
+        })
+      },
+      toggleFav(id) {
+        const tsk = this.tasks.find(t => t.id === id)
+        tsk.isFav = !tsk.isFav
+      }
   
-  }
-  
-})
+    }
+
+} )
 
